@@ -6,9 +6,27 @@ class Init {
 		$this->add_actions();
 	}
 
-	public function add_styles () {
-		wp_equeue_style('rr_bb_styles', '');
-	}
+	public function admin_assets () {
+    $vars = [
+      'tmpl_dir' => get_template_directory(),
+      'style_dir' => get_stylesheet_directory_uri()
+    ];
+    // wp_die(print_r($vars));
+    wp_enqueue_script('rr_gtg_admin_js',site_url().'/wp-content/plugins/rr-gtg-extensions/assets/admin.min.js', [], false, true);
+    wp_localize_script( 'rr_gtg_admin_js', 'theme_vars', $vars);
+  }
+
+  public function front_end_assets() {
+    $vars = [
+      'tmpl_dir' => get_template_directory(),
+      'style_dir' => get_stylesheet_directory_uri()
+    ];
+
+    // Compiled css/js
+    wp_enqueue_style('rr_gtg_css',site_url().'/wp-content/plugins/rr-gtg-extensions/assets/main.min.css');
+    wp_enqueue_script('rr_gtg_js',site_url().'/wp-content/plugins/rr-gtg-extensions/assets/main.min.js', [], false, true);
+    wp_localize_script( 'rr_gtg_js', 'theme_vars', $vars);
+  }
 
 	public function add_actions () {
 		// add form submission action here
