@@ -12,7 +12,7 @@ spl_autoload_register( 'rr_autoload' );
  *
  * The namespaces in this plugin map to paths in the directory structure.
  *
- * @param string $class_name The fully-qualified name of the class to load, e.g. "BarrelDirectory\Classes\Api".
+ * @param string $class_name The fully-qualified name of the class to load, e.g. "Barrel\Classes\Api".
  */
 
 function rr_autoload( $class_name ) {

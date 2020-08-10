@@ -1,4 +1,4 @@
-.barrel-directory__container {
+#subscribe-form {
   .fieldset {
     border: 0;
     padding: 0;
@@ -86,14 +86,6 @@
         width: 8px;
         height: 8px;
         background: var(--c-red);
-      }
-    }
-
-    &[type="radio"] {
-      border-radius: 100%;
-
-      &:checked::before {
-        border-radius: 100%;
       }
     }
 
