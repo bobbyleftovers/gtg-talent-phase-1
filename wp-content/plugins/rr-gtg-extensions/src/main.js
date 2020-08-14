@@ -1,13 +1,13 @@
 // import Vue from 'vue'
 // import DirectoryMain from './js/components/Directory/DirectoryMain'
-import init from './js/lib/init-modules'
+// import init from './js/lib/init-modules'
 // import { addClass, hasClass } from './js/lib/dom'
 
 document.addEventListener('DOMContentLoaded', () => {
   // Init modules
-  init({
-    'plugin-module': 'plugin-modules'
-  }).mount()
+  // init({
+  //   'plugin-module': 'plugin-modules'
+  // }).mount()
 
   // Add touch class if touch device and re-init modules
   // window.addEventListener('touchstart', () => {
@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 // LoDash cuz its awesome
-window._ = require('lodash')
+// window._ = require('lodash')
 
 // import vue
-window.Vue = require('vue')
+// window.Vue = require('vue')
 
 // Vue.prototype.$_window = window
 

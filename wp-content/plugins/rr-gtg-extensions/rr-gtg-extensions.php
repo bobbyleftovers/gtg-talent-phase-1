@@ -20,5 +20,7 @@ require_once( 'autoload.php' );
 // Add in some constants as needed
 define( 'RRBB_DIRECTORY_PATH', __DIR__ );
 define( 'RRBB_DIRECTORY_ASSETS_URI', site_url().'/wp-content/plugins/rr-gtg-extensions/assets/' );
+define( 'RRBB_MODULE_DIR', plugin_dir_path( __FILE__ ) );
+define( 'RRBB_MODULE_URL', plugins_url( '/', __FILE__ ) );
 
 $init = new Init();
