@@ -1,9 +1,10 @@
 // import Vue from 'vue'
-// import DirectoryMain from './js/components/Directory/DirectoryMain'
+import Header from './js/components/header.js'
 // import init from './js/lib/init-modules'
 // import { addClass, hasClass } from './js/lib/dom'
 
 document.addEventListener('DOMContentLoaded', () => {
+  new Header()
   // Init modules
   // init({
   //   'plugin-module': 'plugin-modules'

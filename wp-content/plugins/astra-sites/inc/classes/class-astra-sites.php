@@ -1210,6 +1210,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 					'parent_category'                    => '',
 					'compatibilities'                    => $this->get_compatibilities(),
 					'compatibilities_data'               => $this->get_compatibilities_data(),
+					'dismiss'                            => __( 'Dismiss this notice.', 'astra-sites' ),
 
 				)
 			);
@@ -1314,6 +1315,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 			$this->image_search_assets();
 
 			wp_enqueue_script( 'astra-sites-elementor-admin-page', ASTRA_SITES_URI . 'inc/assets/js/elementor-admin-page.js', array( 'jquery', 'wp-util', 'updates', 'masonry', 'imagesloaded' ), ASTRA_SITES_VER, true );
+			wp_localize_script( 'astra-sites-elementor-admin-page', 'pagenow', ASTRA_SITES_NAME );
 
 			wp_enqueue_style( 'astra-sites-admin', ASTRA_SITES_URI . 'inc/assets/css/admin.css', ASTRA_SITES_VER, true );
 			wp_style_add_data( 'astra-sites-admin', 'rtl', 'replace' );
@@ -1553,8 +1555,8 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 
 			$required_plugins = ( isset( $_POST['required_plugins'] ) ) ? $_POST['required_plugins'] : $required_plugins;
 
-			$learndash_course_grid = 'https://www.brainstormforce.com/go/learndash-course-grid/';
-			$learndash_woocommerce = 'https://www.brainstormforce.com/go/learndash-woocommerce/';
+			$learndash_course_grid = 'https://www.learndash.com/add-on/course-grid/';
+			$learndash_woocommerce = 'https://www.learndash.com/add-on/woocommerce/';
 			if ( is_plugin_active( 'sfwd-lms/sfwd_lms.php' ) ) {
 				$learndash_addons_url  = admin_url( 'admin.php?page=learndash_lms_addons' );
 				$learndash_course_grid = $learndash_addons_url;
@@ -1566,7 +1568,7 @@ if ( ! class_exists( 'Astra_Sites' ) ) :
 				'sfwd-lms'              => array(
 					'init' => 'sfwd-lms/sfwd_lms.php',
 					'name' => 'LearnDash LMS',
-					'link' => 'https://brainstormforce.com/go/learndash/',
+					'link' => 'https://www.learndash.com/',
 				),
 				'learndash-course-grid' => array(
 					'init' => 'learndash-course-grid/learndash_course_grid.php',
