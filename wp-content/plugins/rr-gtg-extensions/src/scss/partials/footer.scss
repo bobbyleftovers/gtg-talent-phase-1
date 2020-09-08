@@ -1,0 +1,45 @@
+#content-footer {
+	.fl-col-group {
+		display: flex;
+		flex-direction: column;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		@media (min-width: 922px) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			.fl-col {
+				width: auto;
+			}
+		}
+
+		.fl-col {
+			width: auto;
+
+			&:before,
+			&:after {
+				display: none;
+			}
+
+			a {
+				color: $white
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 0;
+				margin-left: 0;
+			}
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}

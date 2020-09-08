@@ -3,6 +3,7 @@ namespace RRBB\Classes;
 
 class Init {
 	public function __construct () {
+    // die('init');
     $this->add_actions();
     $this->front_end_assets();
 	}

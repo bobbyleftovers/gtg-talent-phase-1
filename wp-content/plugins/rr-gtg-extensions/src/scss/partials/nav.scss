@@ -2,5 +2,26 @@
 	@media (min-width: 922px) {
 		top: 0;
 		position: sticky;
+
+		.main-header-bar .button-custom-menu-item .ast-custom-button-link .ast-custom-button {
+	    padding: 0;
+			border-radius: 100%;
+			height: 80px;
+			width: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		.main-header-menu > .menu-item > a {
+			color: $blue;
+		}
+
+		.site-description {
+			padding-top: 6px;
+			color: $blue;
+		}
 	}
 }

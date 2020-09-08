@@ -3,8 +3,8 @@ import Header from './js/components/header.js'
 // import init from './js/lib/init-modules'
 // import { addClass, hasClass } from './js/lib/dom'
 
-document.addEventListener('DOMContentLoaded', () => {
-  new Header()
+// document.addEventListener('DOMContentLoaded', () => {
+  // new Header()
   // Init modules
   // init({
   //   'plugin-module': 'plugin-modules'
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //     }).mount()
   //   }
   // })
-})
+// })
 
 // LoDash cuz its awesome
 // window._ = require('lodash')
