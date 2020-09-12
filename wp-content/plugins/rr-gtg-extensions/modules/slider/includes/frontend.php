@@ -11,12 +11,14 @@
  */
 
 ?>
-<div class="testimonial-slider"><?php
-    foreach($settings->testimonials as $testimonial){ ?>
-        <div class="testimonial">
-            <span class="testimonial__body">"<?= $testimonial->testimonial_body ?>"</span>
-            <span class="testimonial__name"><?= $testimonial->testimonial_name ?>,</span>
-            <span class="testimonial__label"><?= $testimonial->testimonial_label ?></span>
+<div class="rrbb-slider">
+  <div class="slider__slides"><?php
+      foreach($settings->testimonials as $slide){ ?>
+        <div class="slider__slide">
+          <span class="slide__body">"<?= $slide->testimonial_body ?>"</span>
+          <span class="slide__name"><?= $slide->testimonial_name ?>,</span>
+          <span class="slide__label"><?= $slide->testimonial_label ?></span>
         </div><?php
-    }?>
+      } ?>
+  </div>
 </div>

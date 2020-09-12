@@ -1,34 +1,35 @@
-// import scrollTo from '../lib/scroll-to'
+import scrollTo from '../lib/scroll-to'
 class Header {
 	constructor () {
-		this.navItems = document.querySelectorAll('.scroll-nav')
-		console.log('items', this.navItems)
+		this.navItems = document.querySelectorAll('.button-custom-menu-item a')
+		this.checkItems = document.querySelectorAll('.main-navigation a')
 		this.init()
 	}
 
 	init () {
 		const self = this
 		this.navItems.forEach(item => {
-			const link = item.querySelector('a')
-			console.log(link)
-			let toHash = null
-			item.classList.forEach(cls => {
-				if(cls.includes('scroll-nav--')){
-					toHash = cls.split('--')[1]
-				}
-			})
+			let toHash = item.getAttribute('href')
 
-			console.log('toHash', toHash)
-
-			if(toHash && document.querySelector('#' + toHash)) {
-				console.log('add listener', toHash)
-				link.addEventListener('click', (e) => {
+			if(toHash && document.querySelector(toHash)) {
+				item.addEventListener('click', (e) => {
 					e.preventDefault()
-					const section = document.querySelector('#' + toHash)
-					console.log('section', section, section.scrollTop)
-					window.scrollTo()
+					const section = document.querySelector(toHash)
+					scrollTo(section)
 				})
 			}
+		})
+
+		this.checkItems.forEach(item => {
+			item.addEventListener('click', e => {
+				let toHash = item.getAttribute('href')
+				// check if hash is on page
+				const exists = document.querySelector(toHash)
+
+				if(!exists) {
+					window.location.href = '/'
+				}
+			})
 		})
 	}
 }

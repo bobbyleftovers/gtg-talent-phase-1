@@ -11,15 +11,20 @@ class RRTestimonialSlider extends FLBuilderModule {
 		parent::__construct(array(
 			'name'            => 'Testimonial Slider' ,
 			'description'     => 'A Module to add a slider of glowing reviews!',
-			// 'group'           => 'Custom Modules',
+			'group'           => 'Custom Modules',
 			'category'        => 'Custom',
 			'dir'             => RRBB_MODULE_DIR . '/modules/slider/',
 			'url'             => RRBB_MODULE_URL . ' /modules/slider/',
-			// 'icon'            => 'button.svg',
-			// 'editor_export'   => true, // Defaults to true and can be omitted.
-			// 'enabled'         => true, // Defaults to true and can be omitted.
-			// 'partial_refresh' => false, // Defaults to false and can be omitted.
 		));
+
+		// Already registered
+		$this->add_css( 'jquery-bxslider' );
+		$this->add_css( 'font-awesome' );
+		$this->add_js( 'jquery-bxslider' );
+	}
+
+	public function update( $settings ) {
+		return $settings;
 	}
 }
 

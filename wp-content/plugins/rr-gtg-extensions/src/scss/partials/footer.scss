@@ -43,3 +43,23 @@
 		}
 	}
 }
+
+.ast-small-footer-wrap .ast-flex{
+	display: flex;
+	align-items: center;
+
+	@media (min-width: 922px) {
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+.footer-primary-navigation {
+	.nav-menu {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 922px) {
+			justify-content: flex-end;
+		}
+	}
+}
