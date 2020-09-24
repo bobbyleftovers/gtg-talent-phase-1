@@ -676,10 +676,6 @@ input[type="text"].select2-search__field {
   position: relative;
 }
 
-.customize-control-ast-responsive-background .screen-reader-text {
-  top: initial;
-}
-
 .customize-control-ast-responsive-background .background-container h4 {
   font-size: 14px;
   font-weight: 600;
@@ -739,10 +735,11 @@ input[type="text"].select2-search__field {
 }
 
 .customize-control-ast-responsive-background .more-settings {
-  margin-top: 6px;
+  margin-top: 12px;
   display: inline-block;
   padding: 5px 0 5px 0;
   float: left;
+  cursor: pointer;
 }
 
 .customize-control-ast-responsive-background .more-settings:focus {
@@ -760,6 +757,15 @@ input[type="text"].select2-search__field {
 
 .customize-control-ast-responsive-background .background-container.active {
   display: block;
+}
+
+.customize-control-ast-responsive-background .wp-picker-container {
+  display: block;
+}
+
+.customize-control-ast-responsive-background .wp-picker-container .wp-picker-clear {
+  margin-right: 4px;
+  min-height: 30px;
 }
 
 .customize-control-ast-responsive-color .customize-control-content .wp-picker-container {
@@ -1871,10 +1877,6 @@ input[type="text"].select2-search__field {
   position: relative;
 }
 
-.customize-control-ast-responsive-background .screen-reader-text {
-  top: initial;
-}
-
 .customize-control-ast-responsive-background .background-container h4 {
   font-size: 14px;
   font-weight: 600;
@@ -1934,9 +1936,10 @@ input[type="text"].select2-search__field {
 }
 
 .customize-control-ast-responsive-background .more-settings {
-  margin-top: 6px;
+  margin-top: 12px;
   display: inline-block;
   padding: 5px 0 5px 0;
+  cursor: pointer;
   float: left;
 }
 
@@ -1955,6 +1958,15 @@ input[type="text"].select2-search__field {
 
 .customize-control-ast-responsive-background .background-container.active {
   display: block;
+}
+
+.customize-control-ast-responsive-background .wp-picker-container {
+  display: block;
+}
+
+.customize-control-ast-responsive-background .wp-picker-container .wp-picker-clear {
+  margin-right: 4px;
+  min-height: 30px;
 }
 
 .customize-control-ast-responsive-color .customize-control-content .wp-picker-container {

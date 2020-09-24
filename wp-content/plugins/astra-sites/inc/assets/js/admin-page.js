@@ -1212,6 +1212,17 @@ var AstraSitesAjaxQueue = (function() {
 					} else {
 						AstraSitesAdmin._sync_library_with_ajax();
 					}
+				} else {
+					$('#wpbody-content').find('.astra-sites-sync-library-message').remove();
+					var noticeContent = wp.updates.adminNotice( {
+						className: 'notice astra-sites-notice notice-error is-dismissible astra-sites-sync-library-message',
+						message:   response.data + ' <button type="button" class="notice-dismiss"><span class="screen-reader-text">'+astraSitesVars.dismiss+'</span></button>',
+					} );
+					$('#screen-meta').after( noticeContent );
+					$(document).trigger( 'wp-updates-notice-added' );
+					button.removeClass( 'updating-message');
+					AstraSitesAdmin._log( 'Already sync all the sites.' );
+					console.groupEnd( 'Update Library Request' );
 				}
 			});
 		},
@@ -3030,7 +3041,7 @@ var AstraSitesAjaxQueue = (function() {
 
 						AstraSitesAdmin.process_site_data( AstraSitesAdmin.templateData );
 					} else {
-						$('.astra-sites-result-preview .inner > h3').text('Import Process Interrupted');
+						$('.astra-sites-result-preview .heading > h3').text('Import Process Interrupted');
 						$('.astra-sites-import-content').find( '.astra-loading-wrap' ).remove();
 						$('.astra-sites-result-preview').removeClass('preparing');
 						$('.astra-sites-import-content').html( wp.template( 'astra-sites-request-failed' ) );
@@ -3135,7 +3146,7 @@ var AstraSitesAjaxQueue = (function() {
 
 						AstraSitesAdmin.required_plugins_list_markup( AstraSitesAdmin.templateData['site-pages-required-plugins'] );
 					} else {
-						$('.astra-sites-result-preview .inner > h3').text('Import Process Interrupted');
+						$('.astra-sites-result-preview .heading > h3').text('Import Process Interrupted');
 						$('.astra-sites-import-content').find( '.astra-loading-wrap' ).remove();
 						$('.astra-sites-result-preview').removeClass('preparing');
 						$('.astra-sites-import-content').html( wp.template( 'astra-sites-request-failed' ) );

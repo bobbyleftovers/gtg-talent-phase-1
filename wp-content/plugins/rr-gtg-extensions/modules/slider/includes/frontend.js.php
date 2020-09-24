@@ -6,7 +6,7 @@
             slideWidth: 3200,
             minSlides: $(window).width() > 992 ? 3 : 1,
             maxSlides: $(window).width() > 992 ? 3 : 1,
-            moveSlides: 1,
+            moveSlides: $(window).width() > 992 ? 3 : 1,
             pager: true, // dots
             controls: false, //arrows
             autoHover: true
@@ -19,7 +19,7 @@
                 slideWidth: 3200,
                 minSlides: $(window).width() > 992 ? 3 : 1,
                 maxSlides: $(window).width() > 992 ? 3 : 1,
-                moveSlides: 1,
+                moveSlides: $(window).width() > 992 ? 3 : 1,
                 pager: true, // dots
                 controls: false, //arrows
                 autoHover: true
