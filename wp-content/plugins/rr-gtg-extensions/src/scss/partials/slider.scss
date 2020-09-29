@@ -3,12 +3,12 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 10px;
+		padding: 0 10px 10px;
 
 		.slide__body,
 		.slide__name,
 		.slide__label {
-			color: darken($blue, 10%);
+			color: $white;
 		}
 
 		.slide__body {
@@ -25,12 +25,14 @@
 	}
 
 	.bx-wrapper .bx-pager.bx-default-pager a {
-		background: $blue;
+		background: $white;
+		opacity: 0.75;
 		transition: all 300ms ease;
 
 		&:hover,
 		&.active {
-			background: darken($blue, 15%);
+			opacity: 1;
+			background: $white;
 		}
 	}
 }

@@ -46,6 +46,17 @@ FLBuilder::register_module('RRTestimonialSlider', array(
 									'form'          => 'testimonial_form', // ID from registered form below
 									'preview_text'  => 'testimonial_name' // Name of a field to use for the preview text
 								),
+								// 'color'    => array(
+								// 	'type'          => 'color',
+								// 	'label'         => 'Text Color',
+								// 	'default'       => '333333',
+								// 	'show_reset'    => true,
+								// 	'preview'         => array(
+								// 			'type'            => 'css',
+								// 			'selector'        => '.slider-color',
+								// 			'property'        => 'color'
+								// 	)
+								// ),
 							)
 					)
 			)

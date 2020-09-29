@@ -15,8 +15,8 @@ class Init {
     ];
 
     // Compiled css/js
-    wp_enqueue_style('rr_gtg_css', RRBB_MODULE_URL.'assets/main.css');
-    wp_enqueue_script('rr_gtg_js', RRBB_MODULE_URL.'assets/main.js', [], false, true);
+    wp_enqueue_style('rr_gtg_css', RRBB_MODULE_URL.'assets/main.css?build=1.2');
+    wp_enqueue_script('rr_gtg_js', RRBB_MODULE_URL.'assets/main.js?build=1.2', [], false, true);
     wp_localize_script( 'rr_gtg_js', 'theme_vars', $vars);
   }
 
